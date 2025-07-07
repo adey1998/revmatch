@@ -61,7 +61,7 @@ RevMatch is split into 4 modular layers:
 | **Ingestion** | Python (Faker, mock generators) | Simulates SaaS product & billing logs |
 | **Orchestration** | Apache Airflow | The industry standard for scheduling pipelines |
 | **Transformations** | dbt | Clean, testable SQL transformations |
-| **Warehouse** | BigQuery (or DuckDB for local dev) | Used by real data teams at scale |
+| **Warehouse** | BigQuery | Used by real data teams at scale |
 | **API Layer** | FastAPI | Lightweight backend to expose leakage data |
 | **Dashboard** | Looker Studio (or Streamlit) | Show business insights visually |
 | **Infra** | Docker Compose | Run everything with one command — like a real data stack |
