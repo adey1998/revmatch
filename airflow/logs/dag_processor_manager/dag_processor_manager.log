@@ -1,0 +1,59 @@
+[2025-07-08T11:54:50.441-0500] {manager.py:487} INFO - Processing files using up to 1 processes at a time 
+[2025-07-08T11:54:50.442-0500] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-07-08T11:54:50.442-0500] {manager.py:489} INFO - Checking for new files in /Users/arvildey/Documents/revmatch/airflow/dags every 300 seconds
+[2025-07-08T11:54:50.442-0500] {manager.py:755} INFO - Searching for files in /Users/arvildey/Documents/revmatch/airflow/dags
+[2025-07-08T11:54:50.443-0500] {manager.py:758} INFO - There are 1 files in /Users/arvildey/Documents/revmatch/airflow/dags
+[2025-07-08T11:55:19.831-0500] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py                           0           1  0.76s           2025-07-08T16:54:51
+================================================================================
+[2025-07-08T11:55:49.887-0500] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py                           0           1  0.74s           2025-07-08T16:55:22
+================================================================================
+[2025-07-08T11:55:54.192-0500] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-07-08T11:56:45.531-0500] {manager.py:487} INFO - Processing files using up to 1 processes at a time 
+[2025-07-08T11:56:45.532-0500] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-07-08T11:56:45.532-0500] {manager.py:489} INFO - Checking for new files in /Users/arvildey/Documents/revmatch/airflow/dags every 300 seconds
+[2025-07-08T11:56:45.532-0500] {manager.py:755} INFO - Searching for files in /Users/arvildey/Documents/revmatch/airflow/dags
+[2025-07-08T11:56:45.533-0500] {manager.py:758} INFO - There are 1 files in /Users/arvildey/Documents/revmatch/airflow/dags
+[2025-07-08T11:57:15.091-0500] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py                           1           0  8.95s           2025-07-08T16:56:54
+================================================================================
+[2025-07-08T11:57:45.148-0500] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py                           1           0  1.07s           2025-07-08T16:57:25
+================================================================================
+[2025-07-08T11:58:15.197-0500] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py                           1           0  1.08s           2025-07-08T16:57:56
+================================================================================
+[2025-07-08T11:58:45.255-0500] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py                           1           0  1.54s           2025-07-08T16:58:22
+================================================================================

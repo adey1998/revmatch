@@ -35,7 +35,7 @@ def main():
         usage_logs += [generate_usage_event(tenant) for _ in range(event_count)]
         billing_logs.append(generate_billing_record(tenant, event_count))
 
-    # Extract step in ELT (in our case it's generating mock data)
+    # 'Extract' step in ELT (in our case it's generating mock data)
     with open("data/usage_events.json", "w") as f:
         json.dump(usage_logs, f, indent=2)
     
