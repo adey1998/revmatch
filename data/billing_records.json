@@ -1,0 +1,20 @@
+[
+  {
+    "tenantId": "acme_saas",
+    "billedEvents": 106,
+    "amountBilled": 10.600000000000001,
+    "timestamp": "2025-07-08T00:17:30.856611"
+  },
+  {
+    "tenantId": "globex",
+    "billedEvents": 88,
+    "amountBilled": 8.8,
+    "timestamp": "2025-07-08T00:17:30.858239"
+  },
+  {
+    "tenantId": "initech",
+    "billedEvents": 76,
+    "amountBilled": 7.6000000000000005,
+    "timestamp": "2025-07-08T00:17:30.859636"
+  }
+]
