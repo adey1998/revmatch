@@ -1,0 +1,72 @@
+[2025-07-08T11:54:51.073-0500] {processor.py:157} INFO - Started process (PID=15031) to work on /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:54:51.077-0500] {processor.py:829} INFO - Processing file /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py for tasks to queue
+[2025-07-08T11:54:51.077-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:54:51.077-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:54:51.078-0500] {logging_mixin.py:154} INFO - >>> DAG file loaded: revmatch.py <<<
+[2025-07-08T11:54:51.099-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:54:51.092-0500] {dagbag.py:346} ERROR - Failed to import: /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+Traceback (most recent call last):
+  File "/Users/arvildey/Documents/revmatch/.venv/lib/python3.9/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py", line 6, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+[2025-07-08T11:54:51.100-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:54:51.160-0500] {processor.py:179} INFO - Processing /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py took 0.088 seconds
+[2025-07-08T11:55:22.599-0500] {processor.py:157} INFO - Started process (PID=15048) to work on /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:55:22.602-0500] {processor.py:829} INFO - Processing file /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py for tasks to queue
+[2025-07-08T11:55:22.602-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:55:22.602-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:55:22.604-0500] {logging_mixin.py:154} INFO - >>> DAG file loaded: revmatch.py <<<
+[2025-07-08T11:55:22.623-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:55:22.617-0500] {dagbag.py:346} ERROR - Failed to import: /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+Traceback (most recent call last):
+  File "/Users/arvildey/Documents/revmatch/.venv/lib/python3.9/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py", line 6, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+[2025-07-08T11:55:22.624-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:55:22.682-0500] {processor.py:179} INFO - Processing /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py took 0.083 seconds
+[2025-07-08T11:56:46.039-0500] {processor.py:157} INFO - Started process (PID=15323) to work on /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:56:46.043-0500] {processor.py:829} INFO - Processing file /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py for tasks to queue
+[2025-07-08T11:56:46.043-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:56:46.043-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:56:46.044-0500] {logging_mixin.py:154} INFO - >>> DAG file loaded: revmatch.py <<<
+[2025-07-08T11:56:54.002-0500] {processor.py:839} INFO - DAG(s) dict_keys(['revmatch_test']) retrieved from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:56:54.349-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:56:54.349-0500] {manager.py:499} INFO - Created Permission View: %s
+[2025-07-08T11:56:54.352-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:56:54.352-0500] {manager.py:499} INFO - Created Permission View: %s
+[2025-07-08T11:56:54.355-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:56:54.355-0500] {manager.py:499} INFO - Created Permission View: %s
+[2025-07-08T11:56:54.355-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:56:54.355-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-08T11:56:54.359-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:56:54.359-0500] {dag.py:2963} INFO - Creating ORM DAG for revmatch_test
+[2025-07-08T11:56:54.363-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:56:54.363-0500] {dag.py:3722} INFO - Setting next_dagrun for revmatch_test to 2025-07-07T00:00:00+00:00, run_after=2025-07-08T00:00:00+00:00
+[2025-07-08T11:56:54.369-0500] {processor.py:179} INFO - Processing /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py took 8.330 seconds
+[2025-07-08T11:57:25.276-0500] {processor.py:157} INFO - Started process (PID=15384) to work on /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:57:25.279-0500] {processor.py:829} INFO - Processing file /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py for tasks to queue
+[2025-07-08T11:57:25.279-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:57:25.279-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:57:25.280-0500] {logging_mixin.py:154} INFO - >>> DAG file loaded: revmatch.py <<<
+[2025-07-08T11:57:25.550-0500] {processor.py:839} INFO - DAG(s) dict_keys(['revmatch_test']) retrieved from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:57:25.649-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:57:25.649-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-08T11:57:25.659-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:57:25.658-0500] {dag.py:3722} INFO - Setting next_dagrun for revmatch_test to 2025-07-08T00:00:00+00:00, run_after=2025-07-09T00:00:00+00:00
+[2025-07-08T11:57:25.668-0500] {processor.py:179} INFO - Processing /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py took 0.392 seconds
+[2025-07-08T11:57:56.473-0500] {processor.py:157} INFO - Started process (PID=15405) to work on /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:57:56.476-0500] {processor.py:829} INFO - Processing file /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py for tasks to queue
+[2025-07-08T11:57:56.476-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:57:56.476-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:57:56.477-0500] {logging_mixin.py:154} INFO - >>> DAG file loaded: revmatch.py <<<
+[2025-07-08T11:57:56.789-0500] {processor.py:839} INFO - DAG(s) dict_keys(['revmatch_test']) retrieved from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:57:56.872-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:57:56.872-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-08T11:57:56.880-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:57:56.879-0500] {dag.py:3722} INFO - Setting next_dagrun for revmatch_test to 2025-07-08T00:00:00+00:00, run_after=2025-07-09T00:00:00+00:00
+[2025-07-08T11:57:56.887-0500] {processor.py:179} INFO - Processing /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py took 0.415 seconds
+[2025-07-08T11:58:22.163-0500] {processor.py:157} INFO - Started process (PID=15425) to work on /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:58:22.166-0500] {processor.py:829} INFO - Processing file /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py for tasks to queue
+[2025-07-08T11:58:22.167-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:58:22.167-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:58:22.502-0500] {processor.py:839} INFO - DAG(s) dict_keys(['revmatch_test']) retrieved from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:58:22.587-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:58:22.587-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-08T11:58:22.595-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:58:22.595-0500] {dag.py:3722} INFO - Setting next_dagrun for revmatch_test to 2025-07-08T00:00:00+00:00, run_after=2025-07-09T00:00:00+00:00
+[2025-07-08T11:58:22.604-0500] {processor.py:179} INFO - Processing /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py took 0.441 seconds
+[2025-07-08T11:58:53.647-0500] {processor.py:157} INFO - Started process (PID=15514) to work on /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:58:53.650-0500] {processor.py:829} INFO - Processing file /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py for tasks to queue
+[2025-07-08T11:58:53.650-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:58:53.650-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:58:53.994-0500] {processor.py:839} INFO - DAG(s) dict_keys(['revmatch_test']) retrieved from /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py
+[2025-07-08T11:58:54.083-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:58:54.083-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-08T11:58:54.091-0500] {logging_mixin.py:154} INFO - [2025-07-08T11:58:54.091-0500] {dag.py:3722} INFO - Setting next_dagrun for revmatch_test to 2025-07-08T00:00:00+00:00, run_after=2025-07-09T00:00:00+00:00
+[2025-07-08T11:58:54.100-0500] {processor.py:179} INFO - Processing /Users/arvildey/Documents/revmatch/airflow/dags/revmatch.py took 0.453 seconds
