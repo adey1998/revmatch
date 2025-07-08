@@ -28,7 +28,7 @@ SaaS companies lose millions each year from:
 - Feature misclassification  
 - Billing system integration failures  
 
-RevMatch helps data teams, finance ops, and platform engineers identify and eliminate these silent revenue killers — using real data engineering tools. 🧠
+RevMatch helps data teams, finance ops, and platform engineers identify and eliminate these silent revenue killers — using real data engineering tools. 
 
 
 ## 🧠 Architecture Overview
@@ -92,7 +92,7 @@ Example CLI test:
 ```bash
 http GET localhost:8000/leaks/tenant/acme_saas
 ```
-## 👨‍⚕️ Built For
+## 👷 Built For
 
 RevMatch is designed to support:
 
@@ -101,8 +101,6 @@ RevMatch is designed to support:
 - **Finance Ops** – Identify billing anomalies early  
 - **Platform Engineers** – Validate event logging integrity  
 - **SaaS Startups & Scaleups** – Avoid silent revenue loss as you grow  
-
----
 
 ## 📦 Example Use Case
 
@@ -123,10 +121,12 @@ RevMatch is designed to support:
 
 ## 📷 Screenshots
 
+Full walkthrough, screenshots, and feature breakdown available at:
 
+🔗 [RevMatch Project Page](https://arvildey.com/projects/revmatch)
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.  
+This project is licensed under the [MIT License](LICENSE). 
 
 
