@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: revmatch_dataset
+    database: revmatch-project
+    schema: "{{ target.schema }}"
+    tables:
+      - name: usage_events
+      - name: billing_records

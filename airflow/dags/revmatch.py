@@ -4,13 +4,14 @@ from datetime import datetime
 import pandas as pd
 import json
 
-# 'Load' step in ELT
 def extract_transform():
+    # 'Extract' step in ELT
     with open("data/usage_events.json") as f:
         usage = json.load(f)
     with open("data/billing_records.json") as f:
         billing = json.load(f)
 
+    # 'Load' step in ELT
     # save to CSVs so dbt can use them
     pd.DataFrame(usage).to_csv("dbt/models/staging/usage_events.csv", index=False)
     pd.DataFrame(billing).to_csv("dbt/models/staging/billing_records.csv", index=False)

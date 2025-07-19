@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_usage_events
+    description: "Staging model that cleans raw usage_events data"
+    columns:
+      - name: tenant_id
+        description: "Unique identifier for each tenant"
+        tests: [not_null]
+      - name: event_type
+        description: "The type of usage event (e.g. subscription_billed)"
+        tests: [not_null]
+      - name: event_timestamp
+        description: "Timestamp of the usage event"
+        tests: [not_null]
