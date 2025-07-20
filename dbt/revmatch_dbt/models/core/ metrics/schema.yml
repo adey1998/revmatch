@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: tenant_metrics
+    description: "Final model summarizing tenant-level revenue metrics"
+    columns:
+      - name: tenant_id
+        description: "Tenant identifier"
+        tests: [not_null]
+      - name: active_days
+        description: "Number of days the tenant was active (had revenue)"
+        tests: [not_null]
+      - name: total_revenue
+        description: "Total revenue from this tenant"
+        tests: [not_null]
+      - name: avg_daily_revenue
+        description: "Average revenue per active day"
+        tests: [not_null]
+
+  - name: revenue_leaks
+    description: "Compares expected vs actual billed revenue and flags mismatches"
+    columns:
+      - name: tenant_id
+        tests: [not_null, unique]
+      - name: expected_bill
+        description: "Calculated from usage events"
+      - name: actual_bill
+        description: "Actual billed amount from billing records"
+      - name: leak_amount
+        description: "Difference between expected and actual billing"
+      - name: status
+        description: "Leak status: underbilled, overbilled, accurate"

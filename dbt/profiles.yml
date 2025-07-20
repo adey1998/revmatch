@@ -1,0 +1,10 @@
+revmatch_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: revmatch-project
+      dataset: revmatch_dataset
+      threads: 4
+      keyfile: /Users/arvildey/.gcp/revmatch-project-86223caf138d.json
