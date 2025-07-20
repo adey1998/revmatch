@@ -1,4 +1,21 @@
-data/*.json
-*.csv
+# Virtual environments
 venv/
 .venv/
+dbt/revmatch_dbt/.venv/
+
+# Backups
+revmatch_backup/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Airflow junk
+airflow/airflow.db
+airflow/logs/
+
+# Logs & temp files
+*.log
+*.csv
+*.db
+.DS_Store
