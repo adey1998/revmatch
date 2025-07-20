@@ -1,6 +1,6 @@
-# RevMatch dbt Project
+# RevMatch dbt
 
-This dbt project powers the **transformation layer** of RevMatch – a data engineering pipeline that detects revenue leaks in usage-based SaaS billing.
+This dbt powers the **transformation layer** of RevMatch – a data engineering pipeline that detects revenue leaks in usage-based SaaS billing.
 
 ## How It Works
 
@@ -9,6 +9,7 @@ RevMatch uses **dbt** to transform raw SaaS usage and billing data into clean, a
 ### **Data Flow**
 1. **Raw Data → Seeds**
    - `usage_events.csv` and `billing_records.csv` are seeded into BigQuery using:
+
      ```bash
      dbt seed
      ```
@@ -32,6 +33,7 @@ RevMatch uses **dbt** to transform raw SaaS usage and billing data into clean, a
 
 ### **Execution Order**
 - dbt automatically runs models based on dependencies:
+  
   raw → staging → intermediate → core
 
 ## **Key Commands**
