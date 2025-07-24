@@ -36,6 +36,11 @@ RevMatch uses **dbt** to transform raw SaaS usage and billing data into clean, a
   
   raw → staging → intermediate → core
 
+## Data Lineage
+Here’s the dependency flow:
+
+![Lineage Graph](./docs/images/lineage_graph.png)
+
 ## **Key Commands**
 Run all models:
 ```dbt run```

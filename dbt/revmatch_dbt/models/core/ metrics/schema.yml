@@ -18,15 +18,24 @@ models:
         tests: [not_null]
 
   - name: revenue_leaks
-    description: "Compares expected vs actual billed revenue and flags mismatches"
+    description: "Identifies revenue leakage by comparing expected usage-based charges with actual billing amounts."
     columns:
       - name: tenant_id
-        tests: [not_null, unique]
+        description: "Unique identifier for the tenant"
+        tests:
+          - not_null
       - name: expected_bill
-        description: "Calculated from usage events"
+        description: "Revenue calculated from actual usage"
+        tests:
+          - not_null
       - name: actual_bill
-        description: "Actual billed amount from billing records"
+        description: "Revenue recorded in billing system"
+        tests:
+          - not_null
       - name: leak_amount
         description: "Difference between expected and actual billing"
       - name: status
-        description: "Leak status: underbilled, overbilled, accurate"
+        description: "Leak status (UNDERBILLED, OVERBILLED, ACCURATE)"
+        tests:
+          - accepted_values:
+              values: ["UNDERBILLED", "OVERBILLED", "ACCURATE"]

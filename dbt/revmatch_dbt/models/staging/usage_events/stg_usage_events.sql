@@ -1,3 +1,5 @@
+{{ config(materialized='view') }}
+
 -- Purpose:
 -- Prepare raw usage events for downstream transformations by:
 -- 1. Renaming columns to snake_case for consistency.
@@ -8,8 +10,6 @@
 -- This model maintains row-level granularity and avoids applying any business logic.
 -- It serves as a clean, reliable source for core models.
 
-
-{{ config(materialized='view') }}
 
 SELECT
     tenantId    AS tenant_id,
