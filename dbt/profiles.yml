@@ -7,4 +7,4 @@ revmatch_dbt:
       project: revmatch-project
       dataset: revmatch_dataset
       threads: 4
-      keyfile: /Users/arvildey/.gcp/revmatch-project-86223caf138d.json
+      keyfile: /opt/airflow/keys/gcp-key.json
