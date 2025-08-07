@@ -19,3 +19,4 @@ airflow/logs/
 *.csv
 *.db
 .DS_Store
+airflow/keys/gcp-key.json
