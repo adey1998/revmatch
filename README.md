@@ -40,21 +40,25 @@ RevMatch is split into 4 modular layers:
 - Generates billing records based on partial/mismatched logic  
 - *Teaches:* how data enters modern SaaS systems  
 
-### 2. Data Orchestration & ETL  
+### 2. Data Orchestration & ELT  
 - Uses Apache Airflow to schedule, run, and track the pipeline  
-- Cleans, joins, and enriches usage + billing data  
+- Loads raw data to BigQuery, then dbt runs ELT transformations  
 
 ### 3. Data Modeling with dbt  
 - Transforms raw logs into:  
   - `stg_usage_events`  
   - `stg_billing_records`  
-  - `revmatch_leaks` — the money finder  
+  - `revenue_leaks` — the money finder  
+  - `tenant_metrics`  
+  - *(optional)* `daily_revenue`  
 - Includes model testing, documentation, and lineage  
 
 ### 4. Insights & Access  
 - FastAPI: REST API for querying revenue mismatches  
-- Looker Studio Dashboard: Visualize leakage by customer, month, amount  
-- Optional: webhook/email alerts for large leaks
+  - `GET /leaks` (filter with `?tenant_id=acme_saas`)  
+  - `GET /metrics` (filter with `?tenant_id=acme_saas`)  
+- Streamlit Dashboard: Visualize leakage by account/tenant, trends, KPIs  
+- Optional (future): webhook/email alerts for large leaks
 
 
 ## 🧱 Tech Stack
@@ -66,7 +70,7 @@ RevMatch is split into 4 modular layers:
 | Transform     | dbt                              | Clean, testable SQL transformations     |
 | Warehouse     | BigQuery                         | Used by real data teams at scale        |
 | API Layer     | FastAPI                          | Lightweight backend for leak data       |
-| Dashboard     | Looker Studio / Streamlit        | Visual insights for business users      |
+| Dashboard     | Streamlit                        | Visual insights for business users      |
 | Infra         | Docker Compose                  | Run everything with one command         |
 
 
@@ -75,7 +79,7 @@ RevMatch is split into 4 modular layers:
 RevMatch follows a modular, real-world data stack pattern often seen in modern SaaS companies:
 
 - **Event-Driven Ingestion** — Mock usage + billing logs simulate real product behavior  
-- **Batch-Oriented ETL** — Apache Airflow runs scheduled batch jobs  
+- **Batch-Oriented ELT** — Apache Airflow runs scheduled batch jobs, then dbt transforms  
 - **ELT with dbt** — Raw → Staging → Business models in SQL  
 - **API Layer & Dashboard** — Expose results via REST and visual dashboards  
 - **Composable Infra** — Each service runs independently via Docker Compose  
@@ -90,8 +94,10 @@ RevMatch follows a modular, real-world data stack pattern often seen in modern S
 
 Example CLI test:  
 ```bash
-http GET localhost:8000/leaks/tenant/acme_saas
+curl "http://localhost:8000/leaks?tenant_id=acme_saas"
+curl "http://localhost:8000/metrics?tenant_id=acme_saas"
 ```
+
 ## 👷 Built For
 
 RevMatch is designed to support:
@@ -127,6 +133,4 @@ Full walkthrough, screenshots, and feature breakdown available at:
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE). 
-
-
+This project is licensed under the [MIT License](LICENSE).  
