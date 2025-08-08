@@ -11,6 +11,9 @@ default_args = {
 def run_script(script_path):
     subprocess.run(["python", script_path], check=True)
 
+def run_dbt():
+    subprocess.run(["dbt", "run", "--project-dir", "/opt/airflow/dbt"], check=True)
+
 with DAG(
     dag_id="revmatch_pipeline",
     default_args=default_args,
@@ -30,4 +33,9 @@ with DAG(
         op_args=["/opt/airflow/scripts/load_to_bigquery.py"]
     )
 
-    generate_data >> load_bq
+    run_dbt_models = PythonOperator(
+        task_id="run_dbt_models",
+        python_callable=run_dbt
+    )
+
+    generate_data >> load_bq >> run_dbt_models

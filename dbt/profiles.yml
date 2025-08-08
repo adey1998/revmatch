@@ -5,6 +5,6 @@ revmatch_dbt:
       type: bigquery
       method: service-account
       project: revmatch-project
-      dataset: revmatch_dataset
+      dataset: revmatch
       threads: 4
       keyfile: /opt/airflow/keys/gcp-key.json

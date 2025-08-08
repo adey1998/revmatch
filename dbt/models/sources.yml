@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: revmatch_dataset
-    database: revmatch-project
+  - name: revmatch            # matches source('revmatch', ...)
+    database: "{{ target.project }}"
     schema: "{{ target.schema }}"
     tables:
       - name: usage_events

@@ -20,4 +20,3 @@ airflow/logs/
 *.db
 .DS_Store
 airflow/keys/gcp-key.json
-airflow/keys/gcp-key.json
