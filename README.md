@@ -50,7 +50,7 @@ RevMatch is split into 4 modular layers:
   - `stg_billing_records`  
   - `revenue_leaks` — the money finder  
   - `tenant_metrics`  
-  - *(optional)* `daily_revenue`  
+  - `daily_revenue`  
 - Includes model testing, documentation, and lineage  
 
 ### 4. Insights & Access  
