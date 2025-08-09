@@ -24,8 +24,8 @@ x-airflow-common:
     - ./airflow/logs:/opt/airflow/logs
     - ./airflow/plugins:/opt/airflow/plugins
     - ./airflow/keys:/opt/airflow/keys
-    - ./dbt:/opt/airflow/dbt                   # mount your entire dbt folder
-    - ./dbt/profiles.yml:/home/airflow/.dbt/profiles.yml  # mount your profiles
+    - ./dbt:/opt/airflow/dbt                   
+    - ./dbt/profiles.yml:/home/airflow/.dbt/profiles.yml
   user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
 
 services:
@@ -76,6 +76,33 @@ services:
     depends_on:
       - postgres
       - redis
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/keys/gcp-key.json
+    volumes:
+      - ./api:/app
+      - ./airflow/keys/gcp-key.json:/app/keys/gcp-key.json
+    depends_on:
+      - airflow-worker
+
+  dashboard:
+    build:
+      context: ./dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/keys/gcp-key.json
+    volumes:
+      - ./dashboard:/app
+      - ./airflow/keys/gcp-key.json:/app/keys/gcp-key.json
+    depends_on:
+      - api
 
 volumes:
   postgres-db-volume:

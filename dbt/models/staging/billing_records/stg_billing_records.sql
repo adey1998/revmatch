@@ -9,8 +9,8 @@
 --    - billed_at → billing_time
 
 
-select
+SELECT
     tenant_id,
-    amount        as amount,
-    billed_at     as billing_time
-from {{ source('revmatch', 'billing_records') }}
+    amount,
+    billing_time
+FROM {{ source('revmatch', 'billing_records') }}
